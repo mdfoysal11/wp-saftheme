@@ -1,0 +1,113 @@
+/*
+Theme Name: theme-001
+Theme URI: https://wordpress.org/download/theme/
+Author: foysal
+Author URI: https://mdfosal.com/
+Description: This is wordPress free theme
+Version:1.0.0
+License: public
+Tags: blog,potfolio,
+Text domain:saf
+*/
+
+.header-main{
+    background: tomato;
+    padding: 7px;
+}
+
+.header-logo img{
+    
+    border-radius: 50px;
+}
+
+.menu ul li a {
+    padding: 7px;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px;
+    color: black;
+    border-radius: 3px;
+    
+}
+.menu{
+    vertical-align: middle;
+    margin-top: 17px;
+}
+.menu ul li a:hover {
+    background: black;
+    color: #fff;
+}
+.hero{
+  padding: 200px;
+}
+.hero h3{
+    text-align: center;
+}
+.hero h1{
+    text-align: center;
+}
+.blog-post{
+    margin-bottom: 25px;
+    margin-left: 80px;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.info-img{
+    margin-left: 10px;
+    
+}
+.info-img img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    font-size: 44px;
+}
+.b, strong{
+    font-size: 13px;
+
+}
+.dashicons {
+    margin-left: 30px;
+    margin-top: 5px;
+    color:mediumseagreen;
+}
+.info-post{
+    margin-top: 6px;
+}
+.blog-post h3 a{
+    font-size:20px;
+    color:navy;
+    
+}
+.blog-post:hover{
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.post-pagination{
+    padding-bottom: 20px;
+}
+.post-pag-wrap{
+
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.post-pag-container-prev{
+    float: left;
+    padding-right:100px;
+    margin-right: 80px;
+    border-right: 1px solid red;
+    
+}
+.post-pag-container-prev a{
+    font-size: 20px;
+    color: springgreen;
+}
+
+.post-pag-container-next a{
+    font-size: 20px;
+    color: springgreen;
+
+}
