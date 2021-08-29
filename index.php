@@ -1,7 +1,8 @@
 
 <?php get_header(  );?>
+
 <body <?php body_class(  );?>>
-<?php get_template_part( "theme-part/header" )?>
+<?php get_template_part( "theme-part/navigation" )?>
 <?php get_template_part( "theme-part/hero" )?>
 
 <div class="container">

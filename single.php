@@ -10,12 +10,10 @@ if (! is_active_sidebar("sidebar-1")) {
 ?>
 
 
-?>
-
-
 <?php get_header(  );?>
+
 <body <?php body_class(  );?>>
-<?php get_template_part( "theme-part/header" )?>
+<?php get_template_part( "theme-part/navigation" )?>
 
 <div class="container">
     <div class="row">
