@@ -32,9 +32,11 @@ add_theme_support( "custom-header", $saf_custom_header_color);
 add_action( "after_setup_theme", "saf_bootstraping");
 
 function assets(){
-wp_enqueue_style( 'bootstrap', "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" );
+wp_enqueue_style( 'bootstrap', "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", null, '1.0' );
+wp_enqueue_style( 'tns-style', "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css",null, '1.0' );
 wp_enqueue_style("style-css", get_stylesheet_uri());
 wp_enqueue_style( "dashicons" );  
+wp_enqueue_script("tns-js", "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js",null,'1.0',true);
 wp_enqueue_script("main-js", get_theme_file_uri("/js/main.js"),array("jquery"),'',true);
 
 }

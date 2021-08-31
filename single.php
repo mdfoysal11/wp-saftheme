@@ -21,7 +21,7 @@ if (! is_active_sidebar("sidebar-1")) {
         <strong class="info-img"><?php echo get_avatar( get_the_author_meta("ID") );?> <?php the_author(  ); ?></strong><br>
             <p><?php echo get_the_date("jS M, Y");?></p>
             <h2 class="post-title"><?php the_title( );?></a></h2>
-            <div class="slider">
+            <div class="foysal">
                              <?php 
                                         if(class_exists('Attachments')){
                                             $attachments = new Attachments('slider');
@@ -40,8 +40,9 @@ if (! is_active_sidebar("sidebar-1")) {
 
 
                     </div>
-
+<?php if(!class_exists('Attachments')) : ?>
             <?php the_post_thumbnail("learg", array("class" => "img-fluid")); ?>
+            <?php endif; ?>
             <?php the_content(  ); ?>
             <div class="post-pag-wrap">
                 <div class="post-pag-container-prev">
