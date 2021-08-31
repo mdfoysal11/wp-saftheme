@@ -1,5 +1,12 @@
 <?php
 
+if(class_exists("Attachments")){
+    require_once "lib/Attachments.php";
+}
+
+
+
+
 function saf_bootstraping(){
     load_theme_textdomain("saf");
     add_theme_support( "title-tag" );
@@ -44,7 +51,29 @@ wp_enqueue_script("main-js", get_theme_file_uri("/js/main.js"),array("jquery"),'
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',
     ) );
-        }
+
+    register_sidebar( 
+        array(
+        'name'          => __( 'footer-one', 'saf' ),
+        'id'            => 'footer-1',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'saf' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( 
+        array(
+        'name'          => __( 'footer-two', 'saf' ),
+        'id'            => 'footer-2',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'saf' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
 add_action( 'widgets_init', 'saf_sidebar' );
 
 
