@@ -102,7 +102,22 @@ function saf_menu_css_class($classes, $item){
              <?php
              
          }
-     }
+        }
+        
+        if(is_page(  )){
+           $saf_feat_image = get_the_post_thumbnail_url( null, "large" );
+           ?>
+               <style>
+                   .page-header{
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(<?php echo $saf_feat_image ?>);
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        background-size: cover;
+                        height: 60vh;
+                   }
+               </style>
+           <?php
+       }
  }
  add_action( "wp_head", "saf_custom_header_bg", );
  

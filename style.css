@@ -116,3 +116,19 @@ Text domain:saf
     color:grey;
     margin-top: 30px;
 }
+
+.page_wapper .page-header h2 {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.testimonial img{
+    border-radius: 50%;
+}
+div#tns1-iw {
+    background: #ddd;
+    border-radius: 5px;
+    padding: 15px 0px;
+}
