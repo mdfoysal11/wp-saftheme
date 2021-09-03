@@ -11,6 +11,7 @@ function saf_bootstraping(){
     load_theme_textdomain("saf");
     add_theme_support( "title-tag" );
     add_theme_support("post-thumbnails");
+    add_image_size( "team-member", 330, 220, true );
     $custom_header = array(
 
         "height" => 84,

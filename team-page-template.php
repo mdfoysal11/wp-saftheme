@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: team Template
+ * Template Name: Team
  */
 the_post(  );
 get_header(  );
@@ -13,27 +13,28 @@ get_header(  );
                <h2><?php the_title();?></h2>
             </div>
     </div>
-<?php if(class_exists("Attachments")): ?>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <?php 
-                        $attachments = new Attachments("testimonials");
-                        if($attachments->exist()){
-                            while($attachment = $attachments->get()){
-                                ?>
-                                    <div class="testimonial">
-                                        <?php echo $attachments->image("thumbnail"); ?>
-                                        <h4><?php echo $attachments->field("name"); ?></h4>
-                                        <p><?php echo $attachments->field("details"); ?></p>
-                                    </div>
-                                <?php
-                            }
-                        }
-                    ?>
+<?php if( have_rows('member') ): ?>
+    <div class="container">
+        <div class="row my-5">
+            <?php while(have_rows("member")): the_row();
+                $member_image = get_sub_field("image");
+                $member_name = get_sub_field("name");
+                $member_position = get_sub_field("position");
+                $member_bio = get_sub_field("bio");
+                $member_email = get_sub_field("email");
+                ?>
+            <div class="col-md-4">
+                <div class="team_member">
+                    <?php echo wp_get_attachment_image($member_image, 'team-member'); ?>
+                    <h4><?php echo $member_name; ?></h4>
+                    <strong><?php echo $member_position; ?></strong>
+                    <p><?php echo $member_bio; ?></p>
+                    <p><?php echo $member_email; ?></p>
+                </div>
+            </div>
+            <?php endwhile; ?>
         </div>
     </div>
-</div>
 <?php endif; ?>
 <?php get_footer( );?>
 
