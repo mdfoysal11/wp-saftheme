@@ -44,6 +44,28 @@ if (! is_active_sidebar("sidebar-1")) {
             <?php the_post_thumbnail("learg", array("class" => "img-fluid")); ?>
             <?php endif; ?>
             <?php the_content(  ); ?>
+            <?php 
+                if(has_post_format( "image") && "the_field"){
+                    $saf_camera_model = get_field("camera_model");
+                    $saf_location = get_field("location");
+                    $saf_licences = get_field("licences");
+                    $saf_licences_details = get_field("licences_details");
+                    ?>
+                        <strong>Camera Model: <?php echo $saf_camera_model; ?></strong><br/>
+                        <strong>Location: <?php echo $saf_location; ?></strong><br/>
+                        <?php if($saf_licences): ?>
+                        <strong>Licences: <?php echo $saf_licences_details; ?></strong><br/>
+                        <?php
+                        else:
+                            ?>
+                            <strong>Licences: Free </strong><br/>
+                            <?php
+
+                         endif; 
+                         ?>
+                    <?php
+                }
+            ?>
             <div class="post-pag-wrap">
                 <div class="post-pag-container-prev">
                 <?php previous_post_link('<span>Previous</span><h3>%link</h3>', '%title', false);?>
